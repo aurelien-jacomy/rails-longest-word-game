@@ -9,7 +9,12 @@
 </ul>
 
 <form action="/score" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>	
+	<input name="grid" type="hidden" value=<%= "#{@letters.join}" %> />
+	<input name="start_time" type="hidden" value=<%= "#{@start_time}" %> />
 	<input type="text" placeholder="Type your word" name="word">
 	<input type="submit" value="Play!">
-	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>
+
+
+
